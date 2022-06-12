@@ -3,7 +3,10 @@ namespace Minesweeper
 type Cell =
     | Covered of Cell
     | Bomb
-    member this.ToChar =
-        match this with
+
+module Cell =
+    let char v =
+        match v with
         | Covered _ -> '.'
         | Bomb -> '*'
+    
