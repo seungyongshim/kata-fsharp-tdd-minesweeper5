@@ -39,3 +39,10 @@ let IsQuestionWithRightClick() =
     let sut = Covered (Number 0)
     let ret = sut |> rclick |> rclick |> char
     Assert.Equal('?', ret )
+
+[<Fact>]
+let IsBoom() =
+    let sut = Covered Bomb
+    let ret = sut |> click |> char
+    Assert.Equal('X', ret )
+
