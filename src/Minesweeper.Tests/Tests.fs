@@ -1,14 +1,14 @@
 module Tests
 
-open Minesweeper
 open Xunit
+open Minesweeper
 open Minesweeper.Cell
 
 [<Fact>]
 let IsCovered() =
     let sut = Covered Bomb
     let ret = sut |> char
-    Assert.Equal('.', ret )
+    Assert.Equal('.', ret)
 
 [<Fact>]
 let IsBomb() =
@@ -20,29 +20,29 @@ let IsBomb() =
 let IsNumber() =
     let sut = Number 0
     let ret = sut |> char
-    Assert.Equal('0', ret )
+    Assert.Equal('0', ret)
 
 [<Fact>]
 let IsFlag() =
     let sut = Flag (Number 0)
     let ret = sut |> char
-    Assert.Equal('A', ret )
+    Assert.Equal('A', ret)
 
 [<Fact>]
 let IsQuestion() =
     let sut = Question (Number 0)
     let ret = sut |> char
-    Assert.Equal('?', ret )
+    Assert.Equal('?', ret)
 
 [<Fact>]
 let IsQuestionWithRightClick() =
     let sut = Covered (Number 0)
     let ret = sut |> rclick |> rclick |> char
-    Assert.Equal('?', ret )
+    Assert.Equal('?', ret)
 
 [<Fact>]
 let IsBoom() =
     let sut = Covered Bomb
     let ret = sut |> click |> char
-    Assert.Equal('X', ret )
+    Assert.Equal('X', ret)
 
