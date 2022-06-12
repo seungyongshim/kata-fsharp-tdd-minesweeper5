@@ -1,4 +1,4 @@
-module Tests
+module CellSpec
 
 open Xunit
 open Minesweeper
@@ -24,18 +24,12 @@ let IsNumber() =
 
 [<Fact>]
 let IsFlag() =
-    let sut = Flag (Number 0)
-    let ret = sut |> char
+    let sut = Covered (Number 0)
+    let ret = sut |> rclick |> char
     Assert.Equal('A', ret)
 
 [<Fact>]
 let IsQuestion() =
-    let sut = Question (Number 0)
-    let ret = sut |> char
-    Assert.Equal('?', ret)
-
-[<Fact>]
-let IsQuestionWithRightClick() =
     let sut = Covered (Number 0)
     let ret = sut |> rclick |> rclick |> char
     Assert.Equal('?', ret)
