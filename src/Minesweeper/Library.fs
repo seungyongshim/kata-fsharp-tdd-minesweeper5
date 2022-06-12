@@ -10,3 +10,8 @@ module Cell =
         | Covered _ -> '.'
         | Bomb -> '*'
     
+    let uncover v =
+        match v with
+        | Covered x -> x
+        | _ -> v
+

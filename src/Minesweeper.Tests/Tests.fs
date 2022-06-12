@@ -6,8 +6,7 @@ open Xunit
 open Minesweeper.Cell
 
 [<Fact>]
-let ``My test2`` () =
+let IsBomb () =
     let sut = Covered Bomb
-    Assert.Equal('1', sut |> char )
-
-    
+    let ret = sut |> uncover |> char
+    Assert.Equal('*', ret )
