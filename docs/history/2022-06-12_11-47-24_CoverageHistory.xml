@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2022-06-12_11-47-24" tag="10_2483357872">
+  <assembly name="Minesweeper">
+    <class name="Minesweeper.CellModule" coveredlines="15" coverablelines="19" totallines="41" coveredbranches="11" totalbranches="18" coveredcodeelements="4" totalcodeelements="4" />
+  </assembly>
+</coverage>
